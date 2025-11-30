@@ -1,117 +1,49 @@
 :root {
-    --green-background-color: #49a09d;
-    --purple-background-color: #5f2c82;
-
-    --standard-font: Arial, Helvetica, sans-serif;
+    --verde: #49a09d;
+    --roxo: #5f2c82;
+    --fonte-padrao: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
+    font-family: var(--fonte-padrao);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body {
-    background-color: var(--purple-background-color);
-    font-family: var(--standard-font);
-    transition: all 0.5s ease-in-out;
+body, html {
+    background-color: var(--roxo);
+    height: 100vh;
+    width: 100vw;
 }
 
 main {
-    width: fit-content;
-    margin: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.658);
-}
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 
-main p {
-    font: 100 0.8em var(--standard-font);
-    padding: 3.5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main section#login {
+    background-color: white;
+    border-radius: 20px;
+    height: 500px;
     width: 250px;
-    margin: 15px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.597);
 }
 
 main section#login div#imagem {
-    background-image: url("assets/password.png");
+    background: var(--roxo) url("assets/password.png") no-repeat center center;
     background-size: cover;
-    background-position: center center;
-    width: 100%;
+    border-radius: 20px 20px 0 0;
     height: 200px;
-    border-radius: 12px 12px 0 0;
-}
-
-main section div#formulario {
-    background-color: white;
-    border-radius: 0 0 12px 12px;
-    padding: 10px;
-}
-
-main section div#formulario h1 {
-    text-align: center;
-}
-
-main section#login div#formulario form div.campo {
-    background-color: var(--purple-background-color);
-    border-radius: 7px;
-    margin: 10px 0;
-}
-
-main section#login div#formulario form div.campo span.material-symbols-outlined {
-    position: relative;
-    top: 10px;
-    left: 10px;
-    color: white;
-}
-
-
-main section#login div#formulario form div.campo input {
-    background-color: var(--green-background-color);
-    border-radius: 7px;
-    padding: 10px;
-    margin: 2px;
-    width: fit-content;
-    border: none;
-    position: relative;
-    left: 10px;
-}
-
-main section#login div#formulario form div.campo input::placeholder {
-    color: rgb(211, 211, 211);
-    font-weight: normal;
-}
-
-main section#login div#formulario form div.campo input:focus {
-    outline: none;
-}
-
-input#entrar, a#esqueceu-senha {
-    width: 100%;
     display: block;
-    height: 40px;
-    border-radius: 4px;
-    margin-top: 5px;
 }
 
-main section#login div#formulario form input#entrar {
-    background-color: var(--green-background-color);
-    font-weight: normal;
-    border: none;
-    color: white;
-}
-
-main section#login div#formulario form a#esqueceu-senha {
-    border: 1px solid var(--green-background-color);
-    text-align: center;
-    text-decoration: none;
-    color: var(--green-background-color);
-    font-size: 1em;
-}
-
-main section#login div#formulario form a#esqueceu-senha span {
-    position: relative;
-    top: 5px;
-    color: var(--green-background-color);
+main section#login div#formulario {
+    display: block;
+    padding: 10px;
 }

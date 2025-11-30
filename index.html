@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
     <!-- Estilo CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     </style>
 </head>
 <body>
@@ -20,12 +27,17 @@
 
                 <form action="forulario.php" method="get">
                     <div class="campo">
-                        <input type="text" name="nome" id="nome" placeholder="seu nome" minlength="3" maxlength="50" autocomplete="name" required>
+                        <span class="material-icons">account_circle</span>
+                        <input type="email" name="email" id="email" placeholder="seu email" minlength="7" maxlength="50" autocomplete="email" required>
                     </div>
 
                     <div class="campo">
-                        <input type="email" name="email" id="email" placeholder="seu email" minlength="7" maxlength="85" autocomplete="email" required>
+                        <span class="material-icons">key</span>
+                        <input type="password" name="password" id="password" placeholder="sua senha" minlength="8" maxlength="85" autocomplete="password" required>
                     </div>
+
+                    <input type="submit" value="Entrar" id="login">
+                    <a href="#" id="esqueci-senha">Esqueci a senha <span class="material-icons">mail</span></a>
                 </form>
             </div>
         </section>

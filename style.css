@@ -14,7 +14,7 @@
 body {
     background-color: var(--purple-background-color);
     font-family: var(--standard-font);
-    transition: all 0.5 ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 main {
@@ -31,7 +31,7 @@ main p {
 
 main section#login {
     width: 250px;
-    margin: 30px auto;
+    margin: 15px auto;
 }
 
 main section#login div#imagem {
@@ -46,20 +46,26 @@ main section#login div#imagem {
 main section div#formulario {
     background-color: white;
     border-radius: 0 0 12px 12px;
+    padding: 10px;
 }
 
 main section div#formulario h1 {
     text-align: center;
-    padding: 10px;
 }
-
 
 main section#login div#formulario form div.campo {
     background-color: var(--purple-background-color);
     border-radius: 7px;
-    margin: 10px;
-    padding: 2px;
+    margin: 10px 0;
 }
+
+main section#login div#formulario form div.campo span.material-symbols-outlined {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
 
 main section#login div#formulario form div.campo input {
     background-color: var(--green-background-color);
@@ -81,9 +87,31 @@ main section#login div#formulario form div.campo input:focus {
     outline: none;
 }
 
-main span.material-symbols-outlined {
-    position: relative;
-    top: 10px;
-    left: 10px;
+input#entrar, a#esqueceu-senha {
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+main section#login div#formulario form input#entrar {
+    background-color: var(--green-background-color);
+    font-weight: normal;
+    border: none;
     color: white;
+}
+
+main section#login div#formulario form a#esqueceu-senha {
+    border: 1px solid var(--green-background-color);
+    text-align: center;
+    text-decoration: none;
+    color: var(--green-background-color);
+    font-size: 1em;
+}
+
+main section#login div#formulario form a#esqueceu-senha span {
+    position: relative;
+    top: 5px;
+    color: var(--green-background-color);
 }
